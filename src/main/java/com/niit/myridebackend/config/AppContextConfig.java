@@ -1,3 +1,13 @@
+/**
+ * AppContextConfig.java
+ * 
+ * This class contains all the configurations necessary for database
+ * communication. It contains the base packages to scan that contains
+ * the models/entities that are to be persisted. It contains database
+ * specific informations like database name, url, driver, user name 
+ * and password.
+ */
+
 package com.niit.myridebackend.config;
 
 import java.util.Properties;
