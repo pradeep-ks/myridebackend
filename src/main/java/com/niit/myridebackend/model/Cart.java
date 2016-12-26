@@ -22,7 +22,7 @@ public class Cart implements Serializable {
 	private int cartId;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "cart" ,cascade = CascadeType.ALL)
-	@JoinColumn(name = "itemId")
+	//@JoinColumn(name = "itemId")
 	private List<Item> items;
 	
 	@OneToOne

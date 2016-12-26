@@ -4,8 +4,12 @@
  * This class contains all the configurations necessary for database
  * communication. It contains the base packages to scan that contains
  * the models/entities that are to be persisted. It contains database
- * specific informations like database name, url, driver, user name 
- * and password.
+ * specific informations to establish connection and Hibernate configurations.
+ * The <code>@Configuration</code> annotation specifies that this Java
+ * class is a configuration class and <code>@ComponentScan</code> 
+ * annotation specifies the location of entity classes and DAO.
+ * 
+ * @author Pradeep Kumar
  */
 
 package com.niit.myridebackend.config;
