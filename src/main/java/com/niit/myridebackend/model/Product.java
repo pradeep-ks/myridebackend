@@ -29,6 +29,7 @@ public class Product implements Serializable {
 	private String description;
 	@Range(min = 1, message = "Price range must be greater than zero")
 	private double price;
+	private int stock;
 	
 	@Transient
 	private MultipartFile image;
@@ -87,6 +88,14 @@ public class Product implements Serializable {
 
 	public void setImage(MultipartFile image) {
 		this.image = image;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
 
 	

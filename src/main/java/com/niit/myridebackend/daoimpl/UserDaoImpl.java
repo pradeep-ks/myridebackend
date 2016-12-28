@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 	@Transactional
 	public void add(User user) {
 		user.setEnabled(true);
-		user.setRole("USER");
+		user.setRole("ROLE_USER");
 		Cart cart = new Cart();
 		cart.setUser(user);
 		user.setCart(cart);
@@ -54,7 +54,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Transactional
-	public User getByUsername(String username) {
+	public User getUserByUsername(String username) {
 		String hql = "from User where username='" + username + "'";
 		User user = (User) sessionFactory.getCurrentSession().createQuery(hql).getSingleResult();
 		return user;
